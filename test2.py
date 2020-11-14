@@ -72,6 +72,8 @@ URL = 'https://coincheck.com/api/rate/'
 
 for key, item in coins.items():
     coincheck = requests.get(URL+item).json()
+    print(item)
+
     print("%-4s : %-10s" % (key, coincheck['rate']))
 
     
