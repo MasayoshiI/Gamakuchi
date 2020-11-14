@@ -164,6 +164,10 @@ class Coincheck:
 config = ConfigParser()
 config.read('gamakuchi.conf')
 
+# get keys
+access_key = config.get('GamakuchiBot', 'coincheckkey')
+secret_key = config.get('GamakuchiBot', 'coinchecksecret')
+
 # Create an instance
 coincheck = Coincheck(access_key, secret_key)
 
