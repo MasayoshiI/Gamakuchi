@@ -8,8 +8,6 @@ import argparse
 import sys
 
 
-
-
 class Coincheck:
     """ Class for CoinCheck API access it takes Access key and Secret key"""
 
@@ -166,13 +164,6 @@ class Coincheck:
 config = ConfigParser()
 config.read('gamakuchi.conf')
 
-# set up api keys
-access_key = config.get('GamakuchiBot', 'coincheckkey')
-secret_key = config.get('GamakuchiBot', 'coinchecksecret')
-
-# print(access_key)
-# print(secret_key)
-
 # Create an instance
 coincheck = Coincheck(access_key, secret_key)
 
@@ -181,9 +172,4 @@ print(coincheck.get_balance())
 # print(coincheck.get_transaction_history())
 print(coincheck.get_order_books())
 
-##### TODO :
-##### BUY order ####
-
-##### SELL order ####
-##### Cancel Order ####
 
